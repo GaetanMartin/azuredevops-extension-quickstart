@@ -6,10 +6,10 @@ This project aims to quickly getting started developping TFS extension with live
 
 ### Required Tools
 
-- VS Code from [https://code.visualstudio.com/](here)
-- VS Code extension: Debugger for Chrome extension from [https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome](here) 
-- NodeJS from [https://nodejs.org](here)
-- Personnal Access Token to publish from command line
+- VS Code from [here](https://code.visualstudio.com/)
+- VS Code extension: Debugger for Chrome extension from [here](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) 
+- NodeJS from [here](https://nodejs.org)
+- [Optional] A Personnal Access Token to publish from command line
 
 ### Setting up the project
 
