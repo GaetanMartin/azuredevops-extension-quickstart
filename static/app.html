@@ -3,7 +3,6 @@
 
 <head>
     <script type="text/javascript" src="../node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js"></script>
-    <script type="text/javascript" src="../dist/bundle.js"></script>
 </head>
 
 <body>
@@ -16,7 +15,7 @@
             usePlatformStyles: true
         });
 
-        VSS.require(["dist/app"], function () {
+        VSS.require(["dist/bundle"], function () {
         });
 
     </script>
