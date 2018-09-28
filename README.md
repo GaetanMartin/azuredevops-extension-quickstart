@@ -33,11 +33,7 @@ First you have to publish your extension (dev) to the marketplace and share + in
 
 To enable live debuging with vscode:
 
-1. Run the typescript compiler in watch mode (ctrl-shift-B on VSC): 
-   ```
-   tsc -w
-   ```
-2. Run webpack in hot mode for dev environnement: 
+1. Run webpack in hot mode for dev environnement: 
    ```
    npm run start:dev
    ```
