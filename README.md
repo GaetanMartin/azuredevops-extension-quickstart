@@ -1,6 +1,6 @@
 # Skeleton Project to develop TFS / AzureDevops Extension
 
-This project aims to quickly getting started developping TFS extension with live debugging environment set up. 
+This project aims to quickly getting started developping TFS extension with live debugging environment set up. It initially is a simple area chart widget. 
 
 ## Installation
 
@@ -9,24 +9,27 @@ This project aims to quickly getting started developping TFS extension with live
 - VS Code from [https://code.visualstudio.com/](here)
 - VS Code extension: Debugger for Chrome extension from [https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome](here) 
 - NodeJS from [https://nodejs.org](here)
+- Personnal Access Token to publish from command line
 
 ### Setting up the project
 
 1. Clone the repository
 2. Run `npm install` to install all the dependencies
 3. Modify the vss-extension.json with your publisher ID
-4. Publish the extension
+4. Publish the extension and install it to your organisation
 
 ## Publishing
 
 To publish you can run `npm run publish:prod` ou `npm run publish:dev`
+
+It will ask for your Personnal Access Token. 
 
 You can modify the publish scripts in package.json adding `--share-with your-organisation` to automatically share with your organisation if your extension is private
 
 
 ## Live debugging
 
-First you have to publish your extension (dev) to the marketplace and share + add it to your organisation. Then add the widget to a dashboard (an error will be displayed, because the baseUri is set to your localhost)
+First you have to publish your extension (dev) to the marketplace and share + install it to your organisation. Then add the widget to a dashboard (an error will be displayed, because the baseUri is set to your localhost, don't worry)
 
 To enable live debuging with vscode:
 
