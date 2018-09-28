@@ -1,0 +1,27 @@
+{
+    "name": "vsts-extension-quickstart",
+    "version": "0.0.1",
+    "private": true,
+    "devDependencies": {
+        "tfx-cli": "^0.6.3",
+        "ts-loader": "^5.2.1",
+        "typescript": "^3.0.3",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.1",
+        "webpack-dev-server": "^3.1.9"
+    },
+    "dependencies": {
+        "vss-web-extension-sdk": "^5.140.0"
+    },
+    "scripts": {
+        "start:dev": "webpack-dev-server --mode development --hot --https --port 3000",
+        "webpack_build:dev": "webpack --mode development",
+        "build": "tsc -p .",
+        "prepublish:dev": "npm run build",
+        "package:dev": "tfx extension create --manifest-globs vss-extension.json --overrides-file configs/dev.json --rev-version",
+        "publish:dev": "tfx extension publish --service-url https://marketplace.visualstudio.com/ --manifest-globs vss-extension.json --overrides-file configs/dev.json --rev-version",
+        "prepublish:prod": "npm run build",
+        "package:prod": "tfx extension create --manifest-globs vss-extension.json --overrides-file configs/prod.json --rev-version",
+        "publish:prod": "tfx extension publish --service-url https://marketplace.visualstudio.com/ --manifest-globs vss-extension.json --overrides-file configs/prod.json --rev-version"
+    }
+}
