@@ -1,6 +1,6 @@
 {
-    "id": "dev-vsts-extension-quickstart",
-    "name": "VSTS Extension QuickStart (dev)",
+    "id": "dev-azuredevops-extension-quickstart",
+    "name": "Azure DevOps Extension QuickStart (dev)",
     "baseUri": "https://localhost:3000",
     "public": false
 }

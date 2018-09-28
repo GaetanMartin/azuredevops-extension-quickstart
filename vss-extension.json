@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "vsts-extension-quickstart",
-    "name": "VSTS Extension Quickstart",
+    "id": "azuredevops-extension-quickstart",
+    "name": "Azure Devops Extension Quickstart",
     "public": false,
     "version": "0.0.1",
-    "description": "VSTS Extension Quickstart",
+    "description": "Azure Devops Extension Quickstart",
     "publisher": "your-publisher-id",
     "categories": [
         "Code"
