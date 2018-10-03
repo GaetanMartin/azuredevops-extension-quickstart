@@ -16,12 +16,13 @@
     "scripts": {
         "start:dev": "webpack-dev-server --mode development --hot --https --port 3000",
         "webpack_build:dev": "webpack --mode development",
-        "build": "tsc -p .",
-        "prepublish:dev": "npm run build",
+        "prepublish:dev": "npm run webpack_build:dev",
         "package:dev": "tfx extension create --manifest-globs vss-extension.json --overrides-file configs/dev.json --rev-version",
         "publish:dev": "tfx extension publish --service-url https://marketplace.visualstudio.com/ --manifest-globs vss-extension.json --overrides-file configs/dev.json --rev-version",
-        "prepublish:prod": "npm run build",
+        
         "package:prod": "tfx extension create --manifest-globs vss-extension.json --overrides-file configs/prod.json --rev-version",
+        "webpack_build:prod": "webpack --mode production",
+        "prepublish:prod": "npm run webpack_build:prod",
         "publish:prod": "tfx extension publish --service-url https://marketplace.visualstudio.com/ --manifest-globs vss-extension.json --overrides-file configs/prod.json --rev-version"
     }
 }

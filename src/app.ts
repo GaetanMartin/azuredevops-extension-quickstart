@@ -1,12 +1,14 @@
 /// <reference types="vss-web-extension-sdk" />
 
 VSS.require(["TFS/Dashboards/WidgetHelpers", "Charts/Services"], function (WidgetHelpers, Services) {
+    var $container = $('#Chart-Container');
     WidgetHelpers.IncludeWidgetStyles();
     VSS.register("SimpleAreaChart", function () {
         return {
-            load: function () {
+            load: function (widgetSettings) {
+                // Extract the data from widgetSettings.customSettings
+                var settings = JSON.parse(widgetSettings.customSettings.data);
                 return Services.ChartsService.getService().then(function (chartService) {
-                    var $container = $('#Chart-Container');
                     var chartOptions = {
                         "hostOptions": {
                             "height": "290",
@@ -27,6 +29,11 @@ VSS.require(["TFS/Dashboards/WidgetHelpers", "Charts/Services"], function (Widge
                     chartService.createChart($container, chartOptions);
                     return WidgetHelpers.WidgetStatusHelper.Success();
                 });
+            },
+            reload: function(widgetSettings) {
+                console.log(widgetSettings);
+                $container.empty();
+                return this.load(widgetSettings);
             }
         }
     });

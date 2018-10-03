@@ -26,7 +26,8 @@
             "id": "SimpleAreaChart",
             "type": "ms.vss-dashboards-web.widget",
             "targets": [
-                "ms.vss-dashboards-web.widget-catalog"
+                "ms.vss-dashboards-web.widget-catalog",
+                "<your-publisher-id>.azuredevops-extension-quickstart.SimpleAreaChart.Configuration"
             ],
             "properties": {
                 "name": "Sample Area Chart",
@@ -42,6 +43,18 @@
                 "supportedScopes": [
                     "project_team"
                 ]
+            }
+        },
+        {
+            "id": "SimpleAreaChart.Configuration",
+            "type": "ms.vss-dashboards-web.widget-configuration",
+            "targets": [
+                "ms.vss-dashboards-web.widget-configuration"
+            ],
+            "properties": {
+                "name": "SimpleAreaChart Configuration",
+                "description": "Configures SimpleAreaChart",
+                "uri": "static/configuration.html"
             }
         }
     ],
