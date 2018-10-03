@@ -21,5 +21,8 @@ module.exports = {
         filename: '[name].js',
         publicPath: '/dist'
     }, 
+    externals: [
+        /^VSS\/.*/, /^TFS\/.*/
+    ],
     devtool: "source-map",
 };
