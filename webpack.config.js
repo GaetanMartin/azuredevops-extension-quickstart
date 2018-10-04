@@ -18,6 +18,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js']
     },
     output: {
+        libraryTarget: "amd",
         filename: '[name].js',
         publicPath: '/dist'
     }, 
