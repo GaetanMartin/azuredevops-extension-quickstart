@@ -9,6 +9,13 @@
         "outDir": "dist/",
         "types": [
             "vss-web-extension-sdk"
-        ],	
-    }
+        ],
+        "lib": [
+            "es2015",
+            "dom"
+        ]
+    }, 
+    "exclude": [
+        "node_modules"
+    ]
 }
